@@ -1,1 +1,40 @@
-@import "tailwindcss";
+:root {
+  /* Colores */
+  --color-red: #FF1E1E;
+  --color-darkblue: #2F3A4A;
+  --color-lightgray: #D9DCE1;
+  --color-white: #FFFFFF;
+  --color-black: #111111;
+
+  /* Fuentes */
+  --font-title: "Caprasimo", serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+/* Modo oscuro */
+body.dark {
+  --color-red: #FF1E1E;        
+  --color-darkblue: #D9DCE1;   
+  --color-lightgray: #2F3A4A;
+  --color-white: #111111;
+  --color-black: #FFFFFF;
+}
+
+/* Tipografía */
+h1, h2, h3, h4 {
+  font-family: var(--font-title);
+}
+
+p, li, span, a {
+  font-family: var(--font-body);
+}
+
+/* Botones */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}

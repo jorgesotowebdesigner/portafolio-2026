@@ -1,18 +1,15 @@
 ---
 import "../styles/global.css";
-import Navbar from "../components/Navbar.astro";
-import Hero from "../components/Hero.astro";
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio 2026 - Jorge Soto</title>
+    <title>Portafolio 2026</title>
   </head>
 
-  <body class="bg-light">
-    <Navbar />
-    <Hero />
+  <body class="bg-white text-gray-900">
+    <slot />
   </body>
 </html>

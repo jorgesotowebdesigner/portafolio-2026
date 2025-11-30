@@ -1,0 +1,20 @@
+---
+import DarkToggle from "./DarkToggle.astro";
+---
+
+<nav class="fixed top-0 left-0 w-full z-50 bg-white dark:bg-[#111111] border-b border-[#D9DCE1] dark:border-[#2F3A4A] px-6 py-4 flex justify-between items-center">
+  <!-- Logo / Nombre -->
+  <div class="text-2xl font-bold" style="font-family: var(--font-title); color: var(--color-darkblue);">
+    Jorge Soto
+  </div>
+
+  <!-- Menú -->
+  <ul class="hidden md:flex gap-6">
+    <li><a href="#about" class="text-[#2F3A4A] dark:text-[#D9DCE1]">Sobre mí</a></li>
+    <li><a href="#projects" class="text-[#2F3A4A] dark:text-[#D9DCE1]">Proyectos</a></li>
+    <li><a href="#contact" class="text-[#2F3A4A] dark:text-[#D9DCE1]">Contacto</a></li>
+  </ul>
+
+  <!-- Botón modo oscuro -->
+  <DarkToggle />
+</nav>
