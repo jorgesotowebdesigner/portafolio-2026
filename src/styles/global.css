@@ -1,40 +1,71 @@
 :root {
-  /* Colores */
   --color-red: #FF1E1E;
   --color-darkblue: #2F3A4A;
   --color-lightgray: #D9DCE1;
   --color-white: #FFFFFF;
   --color-black: #111111;
 
-  /* Fuentes */
   --font-title: "Caprasimo", serif;
   --font-body: "DM Sans", sans-serif;
 }
 
-/* Modo oscuro */
+/* MODE DARK */
 body.dark {
-  --color-red: #FF1E1E;        
-  --color-darkblue: #D9DCE1;   
+  --color-darkblue: #D9DCE1;
   --color-lightgray: #2F3A4A;
   --color-white: #111111;
   --color-black: #FFFFFF;
 }
 
-/* Tipografía */
+/* TIPOGRAFÍA */
 h1, h2, h3, h4 {
   font-family: var(--font-title);
 }
-
 p, li, span, a {
   font-family: var(--font-body);
 }
 
-/* Botones */
-.btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-decoration: none;
+/* CURSOR TYPING */
+.typing-cursor {
   display: inline-block;
+  width: 8px;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+/* FADE UP */
+@keyframes fade-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out forwards;
+}
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+/* GLOW BREATH */
+@keyframes glowBreath {
+  0% { transform: scale(1); opacity: 0.32; }
+  50% { transform: scale(1.06); opacity: 0.52; }
+  100% { transform: scale(1); opacity: 0.32; }
+}
+.glow-breath {
+  animation: glowBreath 6.5s ease-in-out infinite;
+}
+
+/* ESCRITURA DEL PERSONAJE */
+@keyframes writingNatural {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  40%  { transform: translateY(1.4px) rotate(-0.6deg); }
+  80%  { transform: translateY(0px) rotate(0.4deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+.writing-wrapper {
+  transform-origin: 60% 70%;
+  animation: writingNatural 3.8s ease-in-out infinite;
 }

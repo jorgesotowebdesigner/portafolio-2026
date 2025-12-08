@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
-import Hero from "../components/Hero.astro";
+import Hero from "../components/Hero.jsx";
 ---
 
 <html lang="es">
@@ -11,8 +11,8 @@ import Hero from "../components/Hero.astro";
     <title>Portafolio 2026 - Jorge Soto</title>
   </head>
 
-  <body class="bg-light">
+  <body class="bg-lightbg dark:bg-darkbg transition-colors">
     <Navbar />
-    <Hero />
+    <Hero client:load />
   </body>
 </html>
